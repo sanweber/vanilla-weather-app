@@ -1,3 +1,36 @@
-h1 {
-  color: blue;
+body {
+  color: rgb(135, 135, 135);
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+}
+.container {
+  margin-top: 50px;
+}
+
+.card {
+  margin: 50px 350px;
+}
+
+.city-search {
+  margin: 25px;
+}
+.current-weather-icon {
+  font-size: 50px;
+}
+li {
+  list-style: none;
+}
+.hour-forecast,
+.days-forecast {
+  font-weight: bold;
+}
+
+a {
+  color: rgb(135, 135, 135);
+  font-family: "Permanent Marker", cursive;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(95, 95, 95);
+  text-decoration: underline;
 }
