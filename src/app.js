@@ -39,7 +39,7 @@ function showWeather(response) {
   console.log(response.data);
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   document.querySelector("#current-temperature").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -50,6 +50,12 @@ function showWeather(response) {
     response.data.wind.speed
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  let iconElement = document.querySelector("#current-weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function updateCurrentData(city) {
