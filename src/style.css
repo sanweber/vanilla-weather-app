@@ -28,12 +28,16 @@ li {
   font-weight: bold;
 }
 
-a {
+.active {
   color: rgb(135, 135, 135);
-  font-family: "Permanent Marker", cursive;
+  cursor: default;
   text-decoration: none;
 }
-a:hover {
-  color: rgb(95, 95, 95);
-  text-decoration: underline;
+.active:hover {
+  text-decoration: none;
+}
+
+#current-celsius,
+#current-fahrenheit {
+  font-size: smaller;
 }
