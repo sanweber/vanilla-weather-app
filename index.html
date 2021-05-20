@@ -20,9 +20,17 @@
         
         <div class="card-body">
           <form class="city-search" >
-            <input type="text" id="city-input" placeholder="Search City..." />
-            <input type="submit" value="🔎" id="search"/>
-            <input type="submit" value="🏡" id="gps"/>
+            <div class="row">
+              <div class="col-8">
+                <input type="search" id="city-input" placeholder="Search City..." class="form-control"/>
+              </div>
+              <div class="col-2">
+                <input type="submit" value="🔎" id="search" class="btn w-70 border" />
+              </div>
+              <div class="col-2">
+                <input type="submit" value="🏡" id="gps" class="btn w-70 border"/>
+              </div>
+            </div>
           </form>
 
           <div class="container-current-weather">
