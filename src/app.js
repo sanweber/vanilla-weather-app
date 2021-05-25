@@ -33,6 +33,31 @@ if (minute < 10) {
 let h6 = document.querySelector("#current-date");
 h6.innerHTML = `${day} ${date} ${month} ${year}, ${hour}:${minute}`;
 
+//Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="weather-forecast-date">${day} </div>
+      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="" width="40"/>
+      <div class="weather-forecast-temperature"> <span class="weather-forecast-temperature-maximum">18°</span>  <span class="weather-forecast-temperature-minimum">12°</span> 
+      </div>
+    </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Update City and Weather (Temp, Wind, Humidity) When Clicking Normal Search
 
 function showWeather(response) {
@@ -128,3 +153,5 @@ let celsiusLink = document.querySelector("a#current-celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null;
+
+displayForecast();
