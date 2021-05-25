@@ -41,3 +41,22 @@ li {
 #current-fahrenheit {
   font-size: smaller;
 }
+
+.weather-forecast {
+  color: #000000;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temperature {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-minimum {
+  opacity: 0.5;
+}
