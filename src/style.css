@@ -42,6 +42,11 @@ li {
   font-size: smaller;
 }
 
+#current-celsius-felt,
+#current-fahrenheit-felt {
+  font-size: smaller;
+}
+
 .weather-forecast {
   color: #000000;
   margin-top: 20px;

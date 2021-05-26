@@ -76,6 +76,7 @@ function showWeather(response) {
   );
 
   celsiusTemperature = response.data.main.temp;
+  feltCelsiusTemperature = response.data.main.feels_like;
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   let iconElement = document.querySelector("#current-weather-icon");
@@ -153,5 +154,39 @@ let celsiusLink = document.querySelector("a#current-celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let celsiusTemperature = null;
+let feltCelsiusTemperature = null;
 
 displayForecast();
+
+//Conversion for Felt Temperature
+
+function displayFeltFahrenheitTemperature(event) {
+  event.preventDefault();
+  let feltTemperatureElement = document.querySelector(
+    "span#felt-like-temperature"
+  );
+
+  feltCelsiusLink.classList.remove("active");
+  feltFahrenheitLink.classList.add("active");
+
+  let feltFahrenheitTemperature = (feltCelsiusTemperature * 9) / 5 + 32;
+  feltTemperatureElement.innerHTML = Math.round(feltFahrenheitTemperature);
+}
+
+function displayFeltCelsiusTemperature(event) {
+  event.preventDefault();
+
+  feltCelsiusLink.classList.add("active");
+  feltFahrenheitLink.classList.remove("active");
+
+  let feltTemperatureElement = document.querySelector(
+    "span#felt-like-temperature"
+  );
+  feltTemperatureElement.innerHTML = Math.round(feltCelsiusTemperature);
+}
+
+let feltFahrenheitLink = document.querySelector("a#current-fahrenheit-felt");
+feltFahrenheitLink.addEventListener("click", displayFeltFahrenheitTemperature);
+
+let feltCelsiusLink = document.querySelector("a#current-celsius-felt");
+feltCelsiusLink.addEventListener("click", displayFeltCelsiusTemperature);
