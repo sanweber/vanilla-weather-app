@@ -3,13 +3,12 @@ body {
   font-family: "Permanent Marker", cursive;
   text-align: center;
 }
-.container {
+.container-fluid {
   margin: 50px auto;
 }
 
 .card {
-  margin: 50px 350px;
-  max-width: 60%;
+  margin: 50px 450px;
 }
 
 .city-search {
