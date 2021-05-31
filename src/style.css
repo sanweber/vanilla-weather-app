@@ -26,6 +26,7 @@ li {
 .hour-forecast,
 .days-forecast {
   font-weight: bold;
+  margin: 0 auto;
 }
 
 .active {
